@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Register</title>
+<!--     Select2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+    <!-- jQuery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            // Initialize select2
+            $("#citiesDropDown").select2();
+        })
+    </script>
+
+</head>
+
+
+
+
+<body>
+    <form class="form" name="form" action="register.php" method="post">
+        <div class="fields-container">
+            <h1>Register</h1>
+            <p>Fill in to create an account.</p>
+
+            <hr>
+            <label for="firstname"><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" name="firstname" id="firstname" required>
+            <div id="div_valid_invalid1" class="div_valid_invalid"></div>
+
+            <label for="lastname"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" name="lastname" id="lastname" required>
+            <div id="div_valid_invalid2" class="div_valid_invalid"></div>
+
+            <label for="email2"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" id="email2" required>
+            <div id="div_valid_invalid3" class="div_valid_invalid"></div>
+
+            <label for="countiesDropDown"><b>County</b></label>
+            <select id="countiesDropDown" name="county" ></select>
+
+            <label for="citiesDropDown"><b>City</b></label>
+            <select id="citiesDropDown" name="city">
+                <option value="" selected hidden>---Select city----</option>
+                <option></option>
+            </select>
+
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <div id="div_valid_invalid4" class="div_valid_invalid"></div>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+            <div id="div_valid_invalid5" class="div_valid_invalid"></div>
+            <hr>
+
+            <p>By creating an account you agree to our <br> <a href="#">Terms & Privacy</a>.</p>
+            <button type="submit" class="register-button">Register</button>
+        </div>
+
+        <div class="container-sign">
+            <p>Already have an account? <a href="signin.html">Sign in</a>.</p>
+        </div>
+    </form>
+</body>
+</html>
+
+<script src="register.js"></script>
